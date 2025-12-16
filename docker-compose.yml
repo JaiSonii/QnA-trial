@@ -1,0 +1,28 @@
+services:
+  backend:
+    build: ./backend
+    container_name: hemut-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/hemut_qa.db:/app/hemut_qa.db
+    environment:
+      - DATABASE_URL=sqlite:///./hemut_qa.db
+      - SECRET_KEY=supersecretkey123
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+    networks:
+      - hemut-network
+
+  frontend:
+    build: ./frontend
+    container_name: hemut-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - hemut-network
+
+networks:
+  hemut-network:
+    driver: bridge
