@@ -34,8 +34,8 @@ The easiest way to run the application is via Docker Compose.
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-folder>
+   git clone https://github.com/JaiSonii/QnA-trial
+   cd QnA-trial
    ``` 
 2.  **Start the services:**
 
@@ -84,7 +84,7 @@ The system automatically assigns roles based on the email domain during registra
   - Use an email ending in `@admin.com` (e.g., `jai@admin.com`) to create an **Admin** account.
   - Use any other email (e.g., `guest@gmail.com`) to create a **Guest** account.
 
-### 2\. Testing the "Bonus" AI
+### 2\. Testing the AI
 
 Ask a question containing specific keywords to trigger the mock RAG service:
 
