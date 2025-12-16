@@ -4,8 +4,6 @@ services:
     container_name: hemut-backend
     ports:
       - "8000:8000"
-    volumes:
-      - ./backend/hemut_qa.db:/app/hemut_qa.db
     environment:
       - DATABASE_URL=sqlite:///./hemut_qa.db
       - SECRET_KEY=supersecretkey123
